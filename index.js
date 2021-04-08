@@ -1,32 +1,36 @@
-const listItems = document.querySelectorAll('li')
+const stapdag = document.querySelector("#stapdag");
+const stapdatum = document.querySelector("#stapdatum");
+const staptijd = document.querySelector("#staptijdstip");
 
-for (item of listItems) {
-  item.addEventListener('keyup', (e) => {
-    if (e.key === 'ArrowUp' || e.key === 'w') moveInList(e.target, 'up')
-    else if (e.key === 'ArrowDown' || e.key === 's') moveInList(e.target, 'down')
-    else if (e.key === 'ArrowLeft' || e.key === 'a') moveBetweenList(e.target, 'left')
-    else if (e.key === 'ArrowRight' || e.key === 'd') moveBetweenList(e.target, 'right')
-  })
-}
+stapdag.classList.add("hide");
+stapdatum.classList.add("hide");
+staptijd.classList.add("hide");
 
-function moveInList(item, direction) {
-  const parent = item.parentElement
-  if (direction === 'up' && item.previousElementSibling) {
-    parent.insertBefore(item, item.previousElementSibling)
-  } 
-  else if (direction === 'down' && item.nextElementSibling) {
-    parent.insertBefore(item.nextElementSibling, item)
-  }
-  item.focus()
-}
+const datumdropdown = document.querySelector(".datumdropdown");
+const daginput = document.querySelectorAll("input[name='dag']");
+const datuminput = document.querySelectorAll("input[name='datum']");
 
-function moveBetweenList(item, direction) {
-  const parent = item.parentElement
-  if (direction === 'left' && parent.parentElement.previousElementSibling) {
-    parent.parentElement.previousElementSibling.children[1].appendChild(item)
-  }
-  else if (direction === 'right' && parent.parentElement.nextElementSibling) {
-    parent.parentElement.nextElementSibling.children[1].appendChild(item)
-  }
-  item.focus()
+
+datumdropdown.addEventListener('input', () => {
+    showMonth(datumdropdown.value);
+    stapdag.classList.remove("hide");
+});
+
+daginput.forEach(element => {
+    element.addEventListener('input', () => {
+        stapdatum.classList.remove("hide");
+    });
+});
+
+datuminput.forEach(element => {
+    element.addEventListener('input', () => {
+        staptijd.classList.remove("hide");
+    });
+});
+
+function showMonth(month) {
+    const monthText = document.querySelectorAll("span.maand");
+    monthText.forEach(element => {
+        element.textContent = month;
+    });
 }
