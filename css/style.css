@@ -119,8 +119,8 @@ body.dark {
 
 #nav_img.dark {
     content:url("/img/metallica.jpg");
-    height: 100px;
-    width: 200px;
+    height: 70px;
+    width: 140px;
 }
 
 #navbar.dark {
@@ -142,4 +142,5 @@ body.dark h1, body.dark h2, body.dark h3, body.dark label {
 
 #zsm_btn.dark, #uur_btn.dark, #morgen_btn.dark {
     background-color: black;
+    font-family: 'Metal Mania', cursive;
 }
