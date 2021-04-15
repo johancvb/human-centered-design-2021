@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background-color: #FFC917;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow-x:hidden;
+    transition: background 0.2s linear;
+}
+
+h1, h2 {
+    font-size: 3em;
+    color: #003082;
+}
+
+nav {
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s linear;
+}
+
+nav img {
+    height: 70px;
+    width: 140px;
+    margin-right: 40px;
+}
+
+nav a {
+    color: #003082;
+    text-decoration: none;
+    font-size: 3vw;
+    margin-right: 100px;
+}
+
+form {
+    background-color: white;
+    width: 60%;
+    padding: 50px;
+    text-align: center;
+    font-size: 1.5em;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
+    margin-bottom: 50px;
+    line-height: 80px;
+}
+
+form button {
+    background-color: #003082d2;
+    color: white;
+    padding: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+
+#label {
+	background-color: #111;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 26px;
+	width: 50px;
+	transform: scale(1.5);
+}
+
+#label #ball {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.checkbox:checked + #label #ball {
+	transform: translateX(24px);
+    background-color: black;
+}
+
+
+.fa-sun {
+	color: #f1c40f;
+}
+
+.fa-skull-crossbones {
+	color: white;
+}
+
+/* DARK MODE */
+
+body.dark {
+    background-image: url("/img/metal.gif");
+    background-repeat:repeat;
+    
+}
+
+#nav_img.dark {
+    content:url("/img/metallica.jpg");
+    height: 100px;
+    width: 200px;
+}
+
+#navbar.dark {
+    background-color: black; 
+}
+
+body.dark a {
+    font-family: 'Metal Mania', cursive; 
+    color: red;
+}
+body.dark h1, body.dark h2, body.dark h3, body.dark label {
+    font-family: 'Metal Mania', cursive; 
+    color: black;
+}
+
+#label.dark {
+    background-color: white;
+}
+
+#zsm_btn.dark, #uur_btn.dark, #morgen_btn.dark {
+    background-color: black;
+}
