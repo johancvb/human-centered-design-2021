@@ -1,0 +1,90 @@
+<%- include("./partials/head.ejs") %>
+    <%- include("./partials/header.ejs") %>
+        <form action="/home">
+            <h1>Kies je reis:</h1>
+            <div class="bestemming_container">
+                <h3>Kies je vertrek- en bestemmingsstation:</h3>
+                <div class="bestemming_wrapper">
+                    <fieldset>
+                        <label for="beginStation">Vertrek vanaf:</label>
+                        <select id="beginStation">
+                            <option value="Amsterdam Centraal">Amsterdam Centraal</option>
+                            <option value="Amsterdam Schiphol">Amsterdam Schiphol</option>
+                            <option value="Haarlem">Haarlem</option>
+                            <option value="Leiden Centraal">Leiden Centraal</option>
+                            <option value="Utrecht Centraal">Utrecht Centraal</option>
+                            <option selected value="Eindhoven Centraal">Eindoven Centraal</option>
+                            <option value="Gouda">Gouda</option>
+                            <option value="Delft">Delft</option>
+                            <option value="Rotterdam Centraal">Rotterdam Centraal</option>
+                            <option value="Rotterdam Blaak">Rotterdam Blaak</option>
+                            <option value="Schiedam Centrum">Schiedam Centrum</option>
+                            <option value="Den Haag Laan v NOI">Den Haag Laan v NOI</option>
+                            <option value="Den Haag Centraal">Den Haag Centraal</option>
+                            <option value="Den Haag HS">Den Haag HS</option>
+                            <option value="Alkmaar">Alkmaar</option>
+                            <option value="Apeldoorn">Apeldoorn</option>
+                            <option value="Amersfoort Centraal">Amersfoort Centraal</option>
+                            <option value="Arnhem Centraal">Arnhem Centraal</option>
+                            <option value="Assen">Assen</option>
+                            <option value="Almere Centrum">Almere Centrum</option>
+                            <option value="Zwolle">Zwolle</option>
+                            <option value="Groningen">Groningen</option>
+                            <option value="Leeuwarden">Leeuwarden</option>
+                            <option value="Maastricht">Maastricht</option>
+                            <option value="Heerenveen">Heerenveen</option>
+                            <option value="Vlissingen">Vlissingen</option>
+                            <option value="Oss">Oss</option>
+                            <option value="Weert">Weert</option>
+                            <option value="Venlo">Venlo</option>
+                            <option value="Den Bosch">Den Bosch</option>
+                            <option value="Breda">Breda</option>
+                        </select>
+                        <button id="switchBtn"><i class="fas fa-exchange-alt"></i></button>
+                        <label for="eindStation">Vertrek naar:</label>
+                        <select id="eindStation">
+                            <option selected value="Amsterdam Centraal">Amsterdam Centraal</option>
+                            <option value="Amsterdam Schiphol">Amsterdam Schiphol</option>
+                            <option value="Haarlem">Haarlem</option>
+                            <option value="Leiden Centraal">Leiden Centraal</option>
+                            <option value="Utrecht Centraal">Utrecht Centraal</option>
+                            <option value="Eindhoven Centraal">Eindoven Centraal</option>
+                            <option value="Gouda">Gouda</option>
+                            <option value="Delft">Delft</option>
+                            <option value="Rotterdam Centraal">Rotterdam Centraal</option>
+                            <option value="Rotterdam Blaak">Rotterdam Blaak</option>
+                            <option value="Schiedam Centrum">Schiedam Centrum</option>
+                            <option value="Den Haag Laan v NOI">Den Haag Laan v NOI</option>
+                            <option value="Den Haag Centraal">Den Haag Centraal</option>
+                            <option value="Den Haag HS">Den Haag HS</option>
+                            <option value="Alkmaar">Alkmaar</option>
+                            <option value="Apeldoorn">Apeldoorn</option>
+                            <option value="Amersfoort Centraal">Amersfoort Centraal</option>
+                            <option value="Arnhem Centraal">Arnhem Centraal</option>
+                            <option value="Assen">Assen</option>
+                            <option value="Almere Centrum">Almere Centrum</option>
+                            <option value="Zwolle">Zwolle</option>
+                            <option value="Groningen">Groningen</option>
+                            <option value="Leeuwarden">Leeuwarden</option>
+                            <option value="Maastricht">Maastricht</option>
+                            <option value="Heerenveen">Heerenveen</option>
+                            <option value="Vlissingen">Vlissingen</option>
+                            <option value="Oss">Oss</option>
+                            <option value="Weert">Weert</option>
+                            <option value="Venlo">Venlo</option>
+                            <option value="Den Bosch">Den Bosch</option>
+                            <option value="Breda">Breda</option>
+                        </select>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="tijd_container">
+                <h3>Kies je vertrektijd:</h3>
+                <div class="button_wrapper">
+                    <button onclick="ZSM_link()" id="zsm_btn">Z.S.M</button>
+                    <button onclick="UUR_link()" id="uur_btn">Over 1 uur</button>
+                    <button onclick="MORGEN_link()" id="morgen_btn">Morgen om 8:00</button>
+                </div>
+            </div>
+        </form>
+        <%- include("./partials/footer.ejs") %>

@@ -25,7 +25,7 @@ nav {
     background-color: white;
     padding: 20px;
     width: 100%;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,7 +55,7 @@ form {
     line-height: 80px;
 }
 
-form button {
+.button_wrapper button {
     background-color: #003082d2;
     color: white;
     padding: 10px;
@@ -109,6 +109,17 @@ form button {
 	color: white;
 }
 
+#beginStation, #eindStation {
+    font-size: 0.7em;
+}
+
+#switchBtn {
+    background-color: #003082d2;
+    height: 40px;
+    width: 60px;
+    color: white;
+}
+
 /* DARK MODE */
 
 body.dark {
@@ -144,3 +155,8 @@ body.dark h1, body.dark h2, body.dark h3, body.dark label {
     background-color: black;
     font-family: 'Metal Mania', cursive;
 }
+
+#switchBtn.dark {
+    background-color: black;
+}
+
