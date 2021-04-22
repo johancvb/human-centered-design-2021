@@ -16,6 +16,8 @@ app.get('/home', function(req, res) {
 })
 
 
-app.listen(port, function() {
-    console.log(`Web Application running on: http://localhost:${port}`)
-})
+// app.listen(port, function() {
+//     console.log(`Web Application running on: http://localhost:${port}`)
+// })
+
+app.listen(process.env.PORT || port, () => console.log(`Web Application running on: http://localhost:${port}`));
