@@ -56,7 +56,7 @@ function playAudio(url) {
 const vandaag = new Date();
 const datum = `${vandaag.getFullYear()}-${vandaag.getMonth() + 1}-${vandaag.getDate()}`
 const datum2 = `${vandaag.getFullYear()}-${vandaag.getMonth() + 1}-${vandaag.getDate() + 1}`
-const ochtend = "08:00"
+const ochtend = "10:00"
 const uur = vandaag.getHours()
 const uur2 = uur + 1
 const tijd = `${uur}:${vandaag.getMinutes()}`
