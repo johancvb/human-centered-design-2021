@@ -10,6 +10,49 @@
                         <select id="beginStation">
                             <option value="Amsterdam Centraal">Amsterdam Centraal</option>
                             <option value="Amsterdam Schiphol">Amsterdam Schiphol</option>
+                            <option value="Leiden Centraal">Leiden Centraal</option>
+                            <option value="Utrecht Centraal">Utrecht Centraal</option>
+                            <option selected value="Eindhoven Centraal">Eindoven Centraal</option>
+                            <option value="Rotterdam Centraal">Rotterdam Centraal</option>
+                            <option value="Den Haag Centraal">Den Haag Centraal</option>
+                            <option value="Den Haag HS">Den Haag HS</option>
+                        </select>
+                        <button id="switchBtn"><i class="fas fa-exchange-alt"></i></button>
+                        <label for="eindStation">Vertrek naar:</label>
+                        <select id="eindStation">
+                            <option selected value="Amsterdam Centraal">Amsterdam Centraal</option>
+                            <option value="Amsterdam Schiphol">Amsterdam Schiphol</option>
+                            <option value="Leiden Centraal">Leiden Centraal</option>
+                            <option value="Utrecht Centraal">Utrecht Centraal</option>
+                            <option value="Eindhoven Centraal">Eindoven Centraal</option>
+                            <option value="Rotterdam Centraal">Rotterdam Centraal</option>
+                            <option value="Den Haag Centraal">Den Haag Centraal</option>
+                            <option value="Den Haag HS">Den Haag HS</option>
+                        </select>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="tijd_container">
+                <h3>Kies je vertrektijd:</h3>
+                <div class="button_wrapper">
+                    <button onclick="UUR_link()" id="uur_btn">Over 1 uur</button>
+                    <button onclick="MORGEN_link()" id="morgen_btn">Morgen om 8:00</button>
+                    <button onclick="togglePopup()" id="popup_btn" type="button">Andere reisdatum</button>
+                </div>
+            </div>
+        </form>
+        <div class="popup" id="popup-1">
+            <div class="overlay"></div>
+            <form action="/home" class="content">
+                <div class="close_btn" onclick="togglePopup()">&times;</div>
+                <h1>Kies een andere reis:</h1>
+                <div class="bestemming_container">
+                    <h3>Kies je vertrek- en bestemmingsstation:</h3>
+                    <div class="bestemming_wrapper">
+                        <label for="beginStationAnders">Vertrek vanaf:</label>
+                        <select id="beginStationAnders">
+                            <option value="Amsterdam Centraal">Amsterdam Centraal</option>
+                            <option value="Amsterdam Schiphol">Amsterdam Schiphol</option>
                             <option value="Haarlem">Haarlem</option>
                             <option value="Leiden Centraal">Leiden Centraal</option>
                             <option value="Utrecht Centraal">Utrecht Centraal</option>
@@ -40,9 +83,9 @@
                             <option value="Den Bosch">Den Bosch</option>
                             <option value="Breda">Breda</option>
                         </select>
-                        <button id="switchBtn"><i class="fas fa-exchange-alt"></i></button>
-                        <label for="eindStation">Vertrek naar:</label>
-                        <select id="eindStation">
+                        <button id="switchBtnAnders"><i class="fas fa-exchange-alt"></i></button>
+                        <label for="eindStationAnders">Vertrek naar:</label>
+                        <select id="eindStationAnders">
                             <option selected value="Amsterdam Centraal">Amsterdam Centraal</option>
                             <option value="Amsterdam Schiphol">Amsterdam Schiphol</option>
                             <option value="Haarlem">Haarlem</option>
@@ -75,16 +118,25 @@
                             <option value="Den Bosch">Den Bosch</option>
                             <option value="Breda">Breda</option>
                         </select>
-                    </fieldset>
+                    </div>
                 </div>
-            </div>
-            <div class="tijd_container">
-                <h3>Kies je vertrektijd:</h3>
-                <div class="button_wrapper">
-                    <button onclick="ZSM_link()" id="zsm_btn">Z.S.M</button>
-                    <button onclick="UUR_link()" id="uur_btn">Over 1 uur</button>
-                    <button onclick="MORGEN_link()" id="morgen_btn">Morgen om 8:00</button>
+                <div id="datum_wrapper">
+                    <h3>Kies een datum en tijd:</h3>
+                    <select id="datum" required>
+                        <option value="2021-4-29">29 april 2021</option>
+                        <option value="2021-4-30">30 april 2021</option>
+                        <option value="2021-5-1">1 mei 2021</option>
+                        <option value="2021-5-2">2 mei 2021</option>
+                        <option value="2021-5-3">3 mei 2021</option>
+                        <option value="2021-5-4">4 mei 2021</option>
+                        <option value="2021-5-5">5 mei 2021</option>
+                        <option value="2021-5-16">6 mei 2021</option>
+                    </select>
+                    <input type="time" name="time" id="time" required>
                 </div>
-            </div>
-        </form>
+                <button onclick="andereDatum()" id="andereDatum_btn">Plan je reis</button>
+
+            </form>
+        </div>
+
         <%- include("./partials/footer.ejs") %>
